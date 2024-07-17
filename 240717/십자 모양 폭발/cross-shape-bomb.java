@@ -56,9 +56,8 @@ public class Main {
                 tempSize++;
             }
         }
-        for(int i = 0;i<tempSize;i++){
-            array[array[0].length-1-i][x] = temp[array[0].length-1-i];
+        for(int i = 0;i<array[0].length;i++){
+            array[i][x] = temp[i];
         }
-
     }
 }
