@@ -26,6 +26,14 @@ public class Main {
     public static int calc(int[][] array, int coor, int target){
         int sum = 0;
         int cont = 1;
+
+        if(array.length ==1){
+            if(target<=1)
+            return 2;
+            else
+            return 0;
+        }
+
         for(int i = 0; i<array[0].length-1;i++){
             if(array[coor][i] == array[coor][i+1])
             cont++;
