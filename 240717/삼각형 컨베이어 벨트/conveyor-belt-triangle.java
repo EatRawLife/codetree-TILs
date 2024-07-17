@@ -12,8 +12,9 @@ public class Main{
             }
         }
 
-        int temp = array[2][n-1];
+       
         for(int j = 0; j< t; j++){
+             int temp = array[2][n-1];
         for(int z = 2; z>=0; z--){
             for(int i = n-1; i>0;i-- ){
                 array[z][i] = array[z][i-1];
