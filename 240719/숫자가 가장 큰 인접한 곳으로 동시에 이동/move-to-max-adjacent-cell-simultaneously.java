@@ -43,15 +43,20 @@ public class Main {
         for(int i = 0; i< sizeOfM; i++){
             int x = mx[i];
             int y = my[i];
+            boolean find = false;
 
             for(int j = i+1; j< sizeOfM; j++){
+                
                 if(x == mx[j]&&y == my[j])
                 {
-                    mx[i] = -1;
-                    my[i] = -1;
                     mx[j] = -1;
                     my[j] = -1; 
+                    find = true;
                 }
+            }
+            if(find == true){
+                mx[i] = -1;
+                my[i] = -1;
             }
         }
 
