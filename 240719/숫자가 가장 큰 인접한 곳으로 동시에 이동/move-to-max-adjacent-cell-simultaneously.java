@@ -27,7 +27,7 @@ public class Main {
         int[] newMyArray = new int[m];
         int tempSize = 0;
 
-        for(int i = 0; i< m; i++){
+        for(int i = 0; i< sizeOfM; i++){
             if(mx[i] != -1){
                 newMxArray[tempSize] = mx[i];
                 newMyArray[tempSize++] = my[i];
@@ -40,11 +40,11 @@ public class Main {
     }
 
     public static void inspection(){
-        for(int i = 0; i< m; i++){
+        for(int i = 0; i< sizeOfM; i++){
             int x = mx[i];
             int y = my[i];
 
-            for(int j = i+1; j< m; j++){
+            for(int j = i+1; j< sizeOfM; j++){
                 if(x == mx[j]&&y == my[j])
                 {
                     mx[i] = -1;
@@ -84,6 +84,8 @@ public class Main {
         mx[mIndex] = newX;
         my[mIndex] = newY;
 
+      
+
     }
 
     public static void main(String[] args) {
@@ -94,6 +96,7 @@ public class Main {
         mx = new int[m];
         my = new int[m];
         sizeOfM = m;
+        t = scan.nextInt();
 
         for(int i = 0; i< n; i++){
             for(int j = 0; j<n; j++){
@@ -106,9 +109,9 @@ public class Main {
             mx[j] = scan.nextInt()-1;
             my[j] = scan.nextInt()-1;
         }
-
+        
         for(int i =0; i< t; i++){
-            for(int j = 0; j<m;j++){
+            for(int j = 0; j<sizeOfM;j++){
                 move(j);
                 //횟수만큼 이동시킴. 
             }
