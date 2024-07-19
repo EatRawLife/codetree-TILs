@@ -10,7 +10,7 @@ public class Main {
     public static int col;
 
     public static int[] dx = {0,0,-1,1};
-    public static int[] dy = {1,-1,0,0};
+    public static int[] dy = {-1,1,0,0};
 
     public static boolean isOut(int row, int col){
         if(row<0||row>n-1||col<0||col>n-1)
