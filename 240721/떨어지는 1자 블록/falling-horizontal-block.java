@@ -56,8 +56,8 @@ public class Main {
         boolean ctinue = true;
        
 
-        for(int i = 0; i< 5; i++){
-            if(i == 5){
+        for(int i = 0; i< n+1; i++){
+            if(i == n+1){
                 ctinue = false;
             }
             else
