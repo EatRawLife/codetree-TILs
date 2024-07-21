@@ -57,7 +57,7 @@ public class Main {
        
 
         for(int i = 0; i< n+1; i++){
-            if(i == n+1){
+            if(i == n){
                 ctinue = false;
             }
             else
