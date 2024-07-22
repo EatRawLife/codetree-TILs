@@ -2,8 +2,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
-        call(4);
+        int i = scan.nextInt();
+        call(i);
     }
 
     public static void call(int i){
