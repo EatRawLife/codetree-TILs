@@ -8,7 +8,7 @@ public class Main {
     public static int n;
     public static int k;
 
-    public static Stack<Integer> st = new Stack<Integer>();
+    public static ArrayList<Integer> st = new ArrayList<Integer>();
 
     public static void select(int count){
         if(count == 0){
@@ -20,9 +20,9 @@ public class Main {
         }
 
         for(int i = 1; i<=k; i++){
-            st.push(i);
+            st.add(i);
             select(count-1);
-            st.pop();
+            st.remove(st.size()-1);
         }
     }
 
