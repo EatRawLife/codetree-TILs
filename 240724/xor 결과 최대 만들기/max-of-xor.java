@@ -11,7 +11,7 @@ public class Main {
     public static int maxi = 0;
 
     public static void select(int arraypoint, int count){
-        if(arraypoint>=n-1){
+        if(arraypoint>n-1){
             if(count == m){
                 int temp = 0; 
                 for(int i = 0; i< m; i++){
