@@ -9,23 +9,20 @@ public class Main {
     public static int N;
     public static int M;
 
-    public static int maxi= 0;
 
     public static boolean[] visited;
     public static ArrayList<Integer>[] vertexMt;
 
-    public static void visit(int vertex,int count){
-
+    public static void visit(int vertex){
 
         for(int i = 0; i< vertexMt[vertex].size(); i++){
+            
             int currVer = vertexMt[vertex].get(i);
             if(visited[currVer]!= true){
                 visited[currVer] = true;
-                visit(currVer,count+1);
+                visit(currVer);
+
                 
-            }
-            else{
-               maxi =Math.max(maxi, count);
             }
         }
 
@@ -51,9 +48,15 @@ public class Main {
 
        int rootVertex = 1;
         visited[rootVertex] = true;
-        visit(rootVertex,0);
+        visit(rootVertex);
 
-        System.out.print(maxi);
+        int maxi= 0;
+        for(int i = 1; i<N;i++ ){
+            if(visited[i] == true )
+            maxi++;
+        }
+
+        System.out.print(maxi-1);
        
          /*
         for(int i = 1; i<= N; i++){
