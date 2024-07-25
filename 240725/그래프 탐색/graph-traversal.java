@@ -51,7 +51,7 @@ public class Main {
         visit(rootVertex);
 
         int maxi= 0;
-        for(int i = 1; i<N;i++ ){
+        for(int i = 1; i<=N;i++ ){
             if(visited[i] == true )
             maxi++;
         }
