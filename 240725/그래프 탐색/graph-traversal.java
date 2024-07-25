@@ -21,7 +21,6 @@ public class Main {
             int currVer = vertexMt[vertex].get(i);
             if(visited[currVer]!= true){
                 visited[currVer] = true;
-                System.out.println(currVer);
                 visit(currVer,count+1);
                 
             }
