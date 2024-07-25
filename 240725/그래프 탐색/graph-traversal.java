@@ -16,16 +16,17 @@ public class Main {
 
     public static void visit(int vertex,int count){
 
-        if(vertexMt[vertex].size() == 0){
-            maxi = Math.max(maxi, count);
-            return;
-        }
 
         for(int i = 0; i< vertexMt[vertex].size(); i++){
             int currVer = vertexMt[vertex].get(i);
             if(visited[currVer]!= true){
                 visited[currVer] = true;
+                System.out.println(currVer);
                 visit(currVer,count+1);
+                
+            }
+            else{
+               maxi =Math.max(maxi, count);
             }
         }
 
@@ -49,12 +50,21 @@ public class Main {
             vertexMt[b].add(a);            
         }
 
-        int rootVertex = 1;
+       int rootVertex = 1;
         visited[rootVertex] = true;
         visit(rootVertex,0);
 
         System.out.print(maxi);
-
-        
+       
+         /*
+        for(int i = 1; i<= N; i++){
+            System.out.print(i+" : ");
+            for(int j = 0; j< vertexMt[i].size(); j++){
+                
+                System.out.print(vertexMt[i].get(j)+" ");
+            }
+            System.out.println();
+        }
+         */
     }
 }
