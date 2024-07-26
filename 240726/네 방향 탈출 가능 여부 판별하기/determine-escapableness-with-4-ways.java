@@ -54,7 +54,7 @@ public class Main {
                 int newX = curr.x+dx[i];
                 int newY = curr.y+dy[i];
 
-                if(notVisited(newX,newY)&&notOut(newX,newY)&&noSnake(newX,newY)){
+                if(notOut(newX,newY)&&notVisited(newX,newY)&&noSnake(newX,newY)){
                     visited[newX][newY] = true;
                     q.add(new Pair(newX,newY));
                 }
