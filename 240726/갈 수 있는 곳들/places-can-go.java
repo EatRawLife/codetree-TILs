@@ -82,12 +82,13 @@ public class Main {
 
         int x;
         int y;
+        visited = new boolean[100][100];
         
 
         for(int i = 0; i< k; i++){
             x = scan.nextInt()-1;
             y = scan.nextInt()-1;
-            visited = new boolean[100][100];
+            
 
             visited[x][y] = true;
             count++;
