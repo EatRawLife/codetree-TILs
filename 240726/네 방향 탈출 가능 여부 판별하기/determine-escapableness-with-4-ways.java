@@ -36,7 +36,7 @@ public class Main {
         return false;
     }
      public static boolean notOut(int x, int y){
-        if(x>=1||x<=n||y>=1||y<=m)
+        if(x>=1&&x<=n&&y>=1&&y<=m)
         return true;
         return false;
     }
