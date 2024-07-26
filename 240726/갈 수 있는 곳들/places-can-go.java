@@ -89,9 +89,10 @@ public class Main {
             x = scan.nextInt()-1;
             y = scan.nextInt()-1;
             
-
+            if(visited[x][y]!= true){
             visited[x][y] = true;
             count++;
+            }
             q.add(new Pair(x,y));
             visit();
 
